@@ -21,7 +21,7 @@
 				<h3>Task 1a</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" id="reset">
 					Reset
 				</button>
 			</div>
@@ -29,32 +29,32 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="shape-container">
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-yellow p2-border"></div>
-					<div class="p2-circle bg-yellow p2-border"></div>
-					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-orange p2-border"></div>
-					<div class="p2-circle bg-orange p2-border"></div>
-					<div class="p2-circle bg-orange"></div>
-					<div class="p2-circle bg-orange"></div>
-					<div class="p2-circle bg-orange"></div>
-					<div class="p2-circle bg-blue"></div>
-					<div class="p2-circle bg-blue"></div>
-					<div class="p2-circle bg-blue p2-border"></div>
-					<div class="p2-circle bg-blue p2-border"></div>
-					<div class="p2-circle bg-blue"></div>
-					<div class="p2-circle" id="gradient-circle"></div>
+					<div class="p2-circle bg-purple" name="purple"></div>
+					<div class="p2-circle bg-purple" name="purple"></div>
+					<div class="p2-circle bg-purple" name="purple"></div>
+					<div class="p2-circle bg-purple" name="purple"></div>
+					<div class="p2-circle bg-purple" name="purple"></div>
+					<div class="p2-circle bg-green" name="green"></div>
+					<div class="p2-circle bg-green" name="green"></div>
+					<div class="p2-circle bg-green" name="green"></div>
+					<div class="p2-circle bg-green" name="green"></div>
+					<div class="p2-circle bg-green" name="green"></div>
+					<div class="p2-circle bg-yellow p2-border" name="yellow"></div>
+					<div class="p2-circle bg-yellow p2-border" name="yellow"></div>
+					<div class="p2-circle bg-yellow" name="yellow"></div>
+					<div class="p2-circle bg-yellow" name="yellow"></div>
+					<div class="p2-circle bg-yellow" name="yellow"></div>
+					<div class="p2-circle bg-orange p2-border" name="orangeborder"></div>
+					<div class="p2-circle bg-orange p2-border" name="orangeborder"></div>
+					<div class="p2-circle bg-orange" name="orange"></div>
+					<div class="p2-circle bg-orange" name="orange"></div>
+					<div class="p2-circle bg-orange" name="orange"></div>
+					<div class="p2-circle bg-blue" name="blue"></div>
+					<div class="p2-circle bg-blue" name="blue"></div>
+					<div class="p2-circle bg-blue p2-border" name="blue"></div>
+					<div class="p2-circle bg-blue p2-border" name="blue"></div>
+					<div class="p2-circle bg-blue" name="blue"></div>
+					<div class="p2-circle" id="gradient-circle" name="gradient"></div>
 				</div>
 			</div>
 		</div>
@@ -62,9 +62,31 @@
 	</div>
 
 
-<script type="text/javascript">
-	// your solution here
 
+<script type="text/javascript">
+	$("[name='purple']").click(function() {
+    $("[name='purple']").hide();
+  });
+  $("[name='green']").click(function() {
+    $("[name='green']").hide();
+    $("[name='blue']").hide();
+  });
+  $("[name='orangeborder']").click(function() {
+    $("[name='orangeborder']").hide();
+  });
+  $("[name='gradient']").click(function() {
+    $("[name='gradient']").hide();
+  });
+  $("[name='orangeborder']").click(function() {
+    $("[name='orangeborder']").hide();
+  });
+  $("#reset").click(function() {
+    $("[name='purple']").show();
+    $("[name='green']").show();
+    $("[name='blue']").show();
+    $("[name='orangeborder']").show();
+    $("[name='gradient']").show();
+  });
 </script>
 </body>
 </html>
